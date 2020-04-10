@@ -9,49 +9,36 @@ import java.util.Random;
  */
 public class Engineer {
 
-    protected  String firstName;
-    protected  String lastName;
+    private  String firstName;
+    private  String lastName;
     protected List<SkillSet> skillSet;
 
-    /**
-     * Default Constructor
-     */
     protected Engineer()
     {
         this.firstName = "First"+new Random().nextInt(1000);
-        this.firstName = "Last"+new Random().nextInt(1000);
+        this.lastName = "Last"+new Random().nextInt(1000);
     }
 
-    /**
-     * Constructor - To Set First and Last name
-     * @param firtstName
-     * @param lastName
-     */
+
     protected Engineer(String firtstName, String lastName)
     {
         this.firstName = firtstName;
         this.lastName = lastName;
     }
 
-    /**
-     * getter for SkillSet
-     * @return
-     */
+
     public List<SkillSet> getSkillSet() {
         return skillSet;
     }
 
-    /**
-     * Setters for Skill Set
-     * @param skillSet
-     */
+
     public void setSkillSet(List<SkillSet> skillSet) {
         this.skillSet = skillSet;
     }
 
     /**
      * This method will Say hello
-     * with first and last name
+     * with first and last name and skill set
      * @return
      */
     protected String sayHello()
