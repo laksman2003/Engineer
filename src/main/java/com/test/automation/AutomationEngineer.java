@@ -29,7 +29,7 @@ public class AutomationEngineer extends Engineer {
      public String sayHello()
      {
        String greetingMessage =  super.sayHello();
-       greetingMessage = greetingMessage +
+       greetingMessage = greetingMessage + "\n" +
                "My favorite test framework is "+this.framework.toString();
 
         return greetingMessage;
@@ -58,7 +58,18 @@ public class AutomationEngineer extends Engineer {
      */
      public int getDayOrdinalNumber(String dayName)
      {
-         return (Days.valueOf(dayName.toUpperCase()).getValue());
+         int ordinalNumber = -1;
+
+         try
+         {
+             ordinalNumber = Days.valueOf(dayName.toUpperCase()).getValue();
+             return  ordinalNumber;
+         }
+         catch(Exception e)
+         {
+             return ordinalNumber;
+         }
+
      }
 
     /**

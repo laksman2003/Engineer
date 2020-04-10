@@ -41,7 +41,7 @@ public class Engineer {
      * with first and last name and skill set
      * @return
      */
-    protected String sayHello()
+    public String sayHello()
     {
         String greetingMessage = null;
         String skills = null;
@@ -50,10 +50,11 @@ public class Engineer {
         {
             if(counter == 0)
                 skills = skill.toString();
-            skills =  skills+ ","+ " "+skill.toString();
+            else
+              skills =  skills+ ","+ " "+skill.toString();
             counter++;
         }
-        greetingMessage = "Hello! My name is"+ this.firstName + " "+ this.lastName+ " "
+        greetingMessage = "Hello! My name is "+ this.firstName + " "+ this.lastName+ " "
                 +"and my skills are: "+ skills;
 
         return  greetingMessage;

@@ -1,6 +1,6 @@
 package com.test.engineer;
 
-enum SkillSet
+public enum SkillSet
 {
     JAVA, JAVASCRIPT, DOTNET, DEVOPS;
 }
